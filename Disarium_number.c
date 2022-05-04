@@ -18,7 +18,7 @@ int main()
         temp=temp/10;
         dc--;
     }
-    if(sum==n)
+    if(n==sum)
     {
         printf("True");
     }

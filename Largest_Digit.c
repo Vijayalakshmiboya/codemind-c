@@ -1,13 +1,12 @@
-
 #include<stdio.h>
 int main()
 {
-    int N,r,largest=0;
-    scanf("%d",&N);
-    while(N>0)
+    int n,r,largest=0;
+    scanf("%d",&n);
+    while(n>0)
     {
-        r=N%10;
-        N=N/10;
+        r=n%10;
+        n=n/10;
         if(largest<r)
         {
             largest=r;

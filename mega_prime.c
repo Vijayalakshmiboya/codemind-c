@@ -1,52 +1,40 @@
 #include<stdio.h>
-int prime(int n)
+int main()
 {
-    int i,c=0;
-    if(n==1||n==0)
-    {
-        return 0;
-    }
-    else
-    {
-    for(i=2;i<=n/2;i++)
+    int n,i,t,c=0,d,s=0,l=0;
+    scanf("%d",&n);
+    t=n;
+    for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
             c++;
-            break;
         }
     }
-    if(c==0)
+    if(c==2)
     {
-        return 1;
+        while(n)
+        {
+            int k=0;
+            d=n%10;
+            n=n/10;
+            l++;
+            for(i=1;i<=d;i++)
+            {
+                if(d%i==0)
+                {
+                    k++;
+                }
+            }
+            if(k==2)
+            {
+                s++;
+            }
+        }
     }
-    }
-}
-int main()
-{
-    int n,i,r,count=0,d=0,k;
-    scanf("%d",&n);
-    k=n;
-    if(prime(n)==1)
+    if(s==l && c==2)
     {
-        while(n>0)
-        {  
-           r=n%10;
-           if(prime(r)==1)
-           {
-               d++;
-           }
-           n=n/10;
-           count+=1;
-        }
-        if(d==count)
-        {
-            printf("Mega Prime");
-        }
-        else
-        {
-            printf("Not Mega Prime");
-        }
+        printf("Mega Prime");
     }
     else
     {

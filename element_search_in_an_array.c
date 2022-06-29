@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,c=0,i,a[100],m;
+    int n,i,arr[100],c=0,m;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
     scanf("%d",&m);
     for(i=0;i<n;i++)
     {
-        if(m==a[i])
+        if(m==arr[i])
         {
             c++;
         }
